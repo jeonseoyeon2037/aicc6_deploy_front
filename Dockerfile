@@ -1,6 +1,6 @@
 # Use the official Node.js image based on Alpine Linux for building the React app
 #FROM node:alpine3.18 as build
-FROM node:18-alpine as build
+FROM node:18-alpine AS build
 
 
 # Set the working directory inside the container to /app
@@ -36,7 +36,7 @@ RUN rm -rf *
 
 
 # Copy the built React app from the build stage to the Nginx HTML directory
-COPY --from=build /app/build/usr/share/nginx/html
+COPY --from=build /app/build /usr/share/nginx/html
 
 
 # Copy the Nginx configuration file
