@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Item from './Item';
 import { useSelector, useDispatch } from 'react-redux';
-import AddItem from './addItem';
+import AddItem from './AddItem';
 import PageTitle from './PageTitle';
 import { fetchGetItems } from '../../redux/slices/apiSlice';
 import { useEffect } from 'react';
